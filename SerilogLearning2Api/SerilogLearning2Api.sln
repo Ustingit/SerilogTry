@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32413.511
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerilogLearning2Api", "SerilogLearning2Api.csproj", "{20793792-317E-4327-A3ED-8B18BAB4359C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20793792-317E-4327-A3ED-8B18BAB4359C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20793792-317E-4327-A3ED-8B18BAB4359C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20793792-317E-4327-A3ED-8B18BAB4359C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20793792-317E-4327-A3ED-8B18BAB4359C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {466F74F6-92F8-4307-A573-5F71969B93B2}
+	EndGlobalSection
+EndGlobal
