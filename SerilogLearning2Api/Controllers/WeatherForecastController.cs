@@ -1,10 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Serilog;
+using Serilog.Configuration;
 
 namespace SerilogLearning2Api.Controllers
 {
@@ -17,9 +18,9 @@ namespace SerilogLearning2Api.Controllers
 			"Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
 		};
 
-		private readonly ILogger<WeatherForecastController> _logger;
+		private readonly ILogger _logger;
 
-		public WeatherForecastController(ILogger<WeatherForecastController> logger)
+		public WeatherForecastController(ILogger logger)
 		{
 			_logger = logger;
 		}
@@ -29,7 +30,7 @@ namespace SerilogLearning2Api.Controllers
 		{
 			try
 			{
-				_logger.LogInformation("Hey, this is a request!");
+				_logger.Information("Hey, this is a request!");
 
 				var rng = new Random();
 
@@ -48,7 +49,7 @@ namespace SerilogLearning2Api.Controllers
 			}
 			catch (Exception e)
 			{
-				_logger.LogError(e, "Something bad happened.");
+				_logger.Error(e, "Something bad happened {CustomProperty}.", 50); //add random custom property to then filter on it in elastic
 
 				return new StatusCodeResult(500);
 			}
