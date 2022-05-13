@@ -1,0 +1,6 @@
+﻿1) docker-compose up
+2) on http://localhost:9200/ there is a settings
+3) on http://localhost:5601/ logs app
+4) add few entries (call controller)
+5) add filter, e.g. "ustin-elastic-search-app-logs-*" for all logs
+6) on http://localhost:5601/app/discover u can see all the logs for this pattern, then, additionaly u can use filter e.g. "level:Error" or "fields.ElapsedMilliseconds > 100" to filter them, or use timeline
